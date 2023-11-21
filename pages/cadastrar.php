@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +26,24 @@
     </header>
 
 
-<form method="post">
+    <main>
+        <section class="cadastro">
+
+        <form method="post">
     
-</form>
+        </form>
 
-<?php
-    if (isset($_REQUEST["cadastrar"])) {
-        include_once("./class/Usuario.php");
+        <?php
+            if (isset($_REQUEST["cadastrar"])) {
+                include_once("./class/Usuario.php");
 
-        $u = new Usuario();
-        $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
+                $u = new Usuario();
+                $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
 
-        echo $u->inserirUsuario() == true ? "<p>Usuário Cadastrado!</p>" : "<p>Ocorreu um erro.</p>";
-    }
-?>
+                echo $u->inserirUsuario() == true ? "<p>Usuário Cadastrado!</p>" : "<p>Ocorreu um erro.</p>";
+            }
+        ?>
+        </section>
+    </main>
 </body>
 </html>

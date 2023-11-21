@@ -11,7 +11,6 @@ html {
 
 body {
     font-family: Inter;
-
     background-color: #FAD824;
 }
 
@@ -21,11 +20,13 @@ header {
     align-items: center;
     
     width: 100%;
-    height: 100px;
+    height: 6rem;
+    
+    background-color: #FAD824;
 }
 
 nav {
-    font-size: 24px;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
@@ -37,12 +38,11 @@ nav a {
 }
 
 #logo {
-    width: 100px;
+    width: 6rem;
 }
 
 .banner img {
     width: 100%;
-    height: fit-content;
 }
 
 .saude {
@@ -50,20 +50,18 @@ nav a {
     flex-direction: column;
     gap: 20px;
     
-    padding: 58px 27px;
+    padding: 3rem 1.5rem;
 }
 
 .saude h2 {
     font-family: Inter;
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 2.3rem;
   
     color: #0A0A0A;
 }
 
 .saude p {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 1.5rem;
     
     color: #0A0A0A;
 }
@@ -78,10 +76,9 @@ nav a {
 }
 
 .modalidades h2 {
-    margin: 40px 30px;
+    margin: 2.5rem 1.5rem;
 
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 2.25rem;
 
     color: #FFF;
 }
@@ -101,29 +98,27 @@ nav a {
     justify-content: space-between;
     align-items: center;
 
-    width: 400px;
+    width: 25rem;
 
     border-radius: 10px;
     background-color: #FAD824;
 }
 
 .card:hover {
-    opacity: 0.9;
     cursor: pointer;
 
-    scale: 1.01;
-    border: 2px solid #fafafa;
+    border: 1px solid #fafafa;
 }
 
 .card img {
-    width: 330px;
-    padding-top: 20px;
-    border-radius: 10px;
+    width: 20rem;
+    padding-top: 1.2rem;
+    border-radius: 0.6rem;
 }
 
 .card span {
-    margin: 30px 0;
-    font-size: 24px;
+    margin: 2rem 0;
+    font-size: 1.5rem;
     font-weight: 700;
     
     color: #0A0A0A;
@@ -152,7 +147,13 @@ nav a {
 
 .button-modalidades button:hover {
     cursor: pointer;
-    opacity: 0.9;
+    
+    border: 1px solid #fafafa;
+}
+
+.cadastro {
+    height: 600px;
+    background-color: #262626;
 }
 
 footer {
@@ -162,14 +163,12 @@ footer {
     align-items: center;
     gap: 20px;
 
-    padding: 20px;
-
     width: 100%;
+    padding: 20px;
 }
 
 footer strong {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 1rem;
     
     color: #0A0A0A;
 }

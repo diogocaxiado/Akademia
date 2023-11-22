@@ -1,4 +1,6 @@
-
+<?php
+    include_once('../class/Usuario.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,37 +15,59 @@
     <title>Akademia</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#">Planos</a>
-            <a href="#">Eventos</a>
-            <a href="./cadastrar.php">Cadastre-se</a>
-        </nav>
-
-        <img id="logo" src="assets/logo.png" alt="">
-    </header>
-
+    <?php
+        include_once('../components/Header/index.php');
+    ?>
 
     <main>
         <section class="cadastro">
+            
+        <div>
+            <h2>Cadastre-se aqui</h2>
+            <form method="post" id="formCadastro">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="Informe seu nome completo" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" placeholder="Informe seu email" name="email" required>
+                
+                <label for="dtNascimento">Data de nascimento:</label>
+                <input type="text" placeholder="Informe sua data de nascimento" name="dtNascimento" required>
+                
+                <label for="cidade">Cidade:</label>
+                <input type="text" placeholder="Informe sua cidade" name="cidade" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" placeholder="Informe uma senha com 8 caracteres ou mais" name="senha" required>
+                
+                <label>Confirme a sua senha:</label>
+                <input type="password" placeholder="Repita a senha" required>
 
-        <form method="post">
-    
-        </form>
+                <?php
+                    if (isset($_REQUEST["cadastrar"])) {
+            
+                        $u = new Usuario();
+                        $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
 
-        <?php
-            if (isset($_REQUEST["cadastrar"])) {
-                include_once("./class/Usuario.php");
+                        echo $u->inserirUsuario() == true ? "
+                        <span class='mensagemSucesso'>Usuário Cadastrado!</span>" : 
+                        "<span class='mensagemErro'>Ocorreu um erro.</span>";
+                    }
+                ?>
+                
+                <button type="submit" class="formBotao" name="cadastrar">Cadastrar</button>
+            </form>
+        </div>
 
-                $u = new Usuario();
-                $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
-
-                echo $u->inserirUsuario() == true ? "<p>Usuário Cadastrado!</p>" : "<p>Ocorreu um erro.</p>";
-            }
-        ?>
+            <section class="imagemLateral">
+                <img src="../assets/cadastroImagem.jpg" id="imagemCadastro" alt="">
+            </section>
         </section>
     </main>
+
+    <?php
+        include_once('../components/Footer/index.php');
+    ?>
 </body>
 </html>

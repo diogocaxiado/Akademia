@@ -23,13 +23,46 @@
             return $this->nome;
         }
 
+        public function getEmail() {
+            return $this->email;
+        }
+        
+        public function getDtNascimento() {
+            return $this->dtNascimento;
+        }
+
+        public function getCidade() {
+            return $this->cidade;
+        }
+
+        public function getSenha() {
+            return $this->senha;
+        }
+
         public function setNome($_nome) {
             $this->nome = $_nome;
         }
 
+        public function setEmail($_email) {
+            $this->email = $_email;
+        }
+
+        public function setDtNascimento($_dtNascimento) {
+            $this->dtNascimento = $_dtNascimento;
+        }
+
+        public function setCidade($_cidade) {
+            $this->cidade = $_cidade;
+        }
+
+        public function setSenha($_senha) {
+            $this->senha = $_senha;
+        }
+
         public function inserirUsuario() {
+
             include_once('../db/conn.php');
-            $sql = "CALL piUsuario(':nome, :email, :dtNascimento, :cidade, :senha')";
+            $sql = "CALL piUsuario(:nome, :email, :dtNascimento, :cidade, :senha)";
 
             $data = [
                 'nome' => $this->nome,
@@ -41,6 +74,7 @@
 
             $statement = $conn->prepare($sql);
             $statement->execute($data);
+
             return true;
         }
 

@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 6rem;
+    
+    background-color: #FAD824;
+}
+
+nav {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+
+    color: #000;
+}
+
+#logo {
+    width: 6rem;
+}

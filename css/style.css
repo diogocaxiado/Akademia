@@ -14,33 +14,6 @@ body {
     background-color: #FAD824;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    width: 100%;
-    height: 6rem;
-    
-    background-color: #FAD824;
-}
-
-nav {
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-
-    color: #000;
-}
-
-#logo {
-    width: 6rem;
-}
-
 .banner img {
     width: 100%;
 }
@@ -152,23 +125,100 @@ nav a {
 }
 
 .cadastro {
-    height: 600px;
+    display: flex;
+    height: calc(100vh - 12rem);
     background-color: #262626;
+
+    justify-content: space-between;
+    padding: 0 4rem;
+  
 }
 
-footer {
+.cadastro div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-
-    width: 100%;
-    padding: 20px;
+    gap: 24px;
 }
 
-footer strong {
+.cadastro div h2 {
+    font-family: Inter;
+    font-size: 2rem;
+
+    color: #FFF;
+}
+
+#formCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    width: 34rem;
+    margin: 0 4rem;
+    padding: 1.4rem;
+
+    border-radius: 10px;
+    border: 1px solid #FAD824
+}
+
+#formCadastro label {
+    font-family: Inter;
     font-size: 1rem;
+    font-weight: 700;
     
-    color: #0A0A0A;
+    color: #FFF;
+}
+
+#formCadastro input {
+    padding: 10px;
+
+    border: 1px solid #FAD824;
+    border-radius: 5px;
+
+    color: #FFF;
+    background-color: #262626;
+}
+
+#formCadastro input::placeholder {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: italic;
+
+    color: #FFF;
+}
+
+.formBotao {
+    width: 155px;
+    height: 40px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 700;
+    
+    color: #000;
+    background-color: #FAD824;
+}
+
+.formBotao:hover {
+    opacity: 0.8;
+}
+
+#imagemCadastro {
+    width: 100%;
+    height: 100%;
+}
+
+.mensagemSucesso {
+    font-size: 1.2rem;
+    color: #FAD824;
+}
+
+.mensagemErro {
+    font-size: 1.2rem;
+    color: #fa2424;
 }

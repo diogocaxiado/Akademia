@@ -12,21 +12,9 @@
     <title>Akademia</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#">Planos</a>
-            <a href="#">Eventos</a>
-            <a href="./pages/cadastrar.php">Cadastre-se</a>
-        </nav>
-
-        <img id="logo" src="assets/logo.png" alt="">
-    </header>
-    
-    <section class="banner">
-        <img src="./assets/banner.png" alt="banner da akademia"> 
-    </section>
+    <?php
+        include_once('../components/Header/index.php');
+    ?>
 
     <main>
         <section class="saude">
@@ -61,9 +49,8 @@
         </section>
     </main>
 
-    <footer>
-        <strong>Desenvolvido por Diogo, 2023</strong>
-        <strong>Técnico em Informática - Senac Santos</strong>
-    </footer>
+    <?php
+        include_once('../components/Footer/index.php');
+    ?>
 </body>
 </html>

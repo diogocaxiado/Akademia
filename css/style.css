@@ -124,7 +124,7 @@ body {
     border: 1px solid #fafafa;
 }
 
-.cadastro {
+.formulario {
     display: flex;
     height: calc(100vh - 12rem);
     background-color: #262626;
@@ -134,7 +134,7 @@ body {
   
 }
 
-.cadastro div {
+.formulario div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +142,7 @@ body {
     gap: 24px;
 }
 
-.cadastro div h2 {
+.formulario div h2 {
     font-family: Inter;
     font-size: 2rem;
 
@@ -188,10 +188,59 @@ body {
     color: #FFF;
 }
 
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 34rem;
+    margin: 0 4rem;
+    padding: 1.4rem;
+
+    border-radius: 10px;
+    border: 1px solid #FAD824
+}
+
+#formLogin label {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 700;
+    
+    color: #FFF;
+}
+
+#formLogin input {
+    padding: 10px;
+
+    border: 1px solid #FAD824;
+    border-radius: 5px;
+
+    color: #FFF;
+    background-color: #262626;
+}
+
+#formLogin input::placeholder {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: italic;
+
+    color: #FFF;
+}
+
+#formLogin span, #formLogin a{
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: none;
+
+    color: #FFF;
+}
+
 .formBotao {
     width: 155px;
     height: 40px;
     cursor: pointer;
+    margin: 14px 0;
 
     border: none;
     border-radius: 5px;
@@ -222,3 +271,4 @@ body {
     font-size: 1.2rem;
     color: #fa2424;
 }
+

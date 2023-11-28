@@ -1,12 +1,13 @@
 <?php
-    include_once('../class/Usuario.php');
+    include_once('./class/Usuario.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +17,11 @@
 </head>
 <body>
     <?php
-        include_once('../components/Header/index.php');
+        include_once('./components/header.php');
     ?>
 
     <main>
-        <section class="cadastro">
+        <section class="formulario">
             
         <div>
             <h2>Cadastre-se aqui</h2>
@@ -61,13 +62,13 @@
         </div>
 
             <section class="imagemLateral">
-                <img src="../assets/cadastroImagem.jpg" id="imagemCadastro" alt="">
+                <img src="./assets/cadastroImagem.jpg" id="imagemCadastro" alt="">
             </section>
         </section>
     </main>
 
     <?php
-        include_once('../components/Footer/index.php');
+        include_once('./components/footer.php');
     ?>
 </body>
 </html>

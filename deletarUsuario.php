@@ -1,5 +1,5 @@
 <?php
-     include_once("../class/Usuario.php");
+     include_once("./class/Usuario.php");
      $p = new Usuario();
  
      $p->excluirUsuario($_GET["id"]);

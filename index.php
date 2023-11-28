@@ -13,9 +13,13 @@
 </head>
 <body>
     <?php
-        include_once('../components/Header/index.php');
+        include_once('./components/header.php');
     ?>
 
+    <section class="banner">
+        <img src="./assets/banner.png" alt="banner da página">
+    </section>
+    
     <main>
         <section class="saude">
             <h2>Sua saúde em movimento!</h2>
@@ -50,7 +54,7 @@
     </main>
 
     <?php
-        include_once('../components/Footer/index.php');
+        include_once('./components/footer.php');
     ?>
 </body>
 </html>

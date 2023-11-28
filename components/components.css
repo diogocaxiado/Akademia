@@ -24,3 +24,20 @@ nav a {
 #logo {
     width: 6rem;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+footer strong {
+    font-size: 1rem;
+    
+    color: #0A0A0A;
+}

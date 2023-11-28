@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="components/components.css">
 
 <footer>
     <strong>Desenvolvido por Diogo, 2023</strong>

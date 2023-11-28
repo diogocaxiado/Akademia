@@ -61,7 +61,7 @@
 
         public function inserirUsuario() {
 
-            include_once('../db/conn.php');
+            include_once('./db/conn.php');
             $sql = "CALL piUsuario(:nome, :email, :dtNascimento, :cidade, :senha)";
 
             $data = [
@@ -79,7 +79,7 @@
         }
 
         public function listarUsuario() {
-            include('../db/conn.php');
+            include('./db/conn.php');
             $sql = "CALL psUsuario('')";
 
             $data = $conn->query($sql)->fetchAll();
@@ -89,7 +89,7 @@
 
         public function excluirUsuario($_id)
         {
-            include("../db/conn.php");
+            include("./db/conn.php");
             $sql = "CALL pdUsuario(:id)";
 
             $data = [

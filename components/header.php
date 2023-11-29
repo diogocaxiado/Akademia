@@ -6,7 +6,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#">Planos</a>
         <a href="#">Eventos</a>
-        <a href="./login.php">Área Restrita</a>
+        <a href="./areaRestrita.php">Área Restrita</a>
         <a href="./cadastrar.php">Cadastre-se</a>
     </nav>
 

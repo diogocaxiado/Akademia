@@ -34,18 +34,22 @@
                 <input type="password" placeholder="Informe uma senha com 8 caracteres ou mais" name="senha" required>
 
                 <?php
-                    if (isset($_REQUEST["cadastrar"])) {
-            
+                    if (isset($_REQUEST["conectar"])) {
                         $u = new Usuario();
-                        $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
 
-                        echo $u->inserirUsuario() == true ? "
-                        <span class='mensagemSucesso'>Usuário Cadastrado!</span>" : 
-                        "<span class='mensagemErro'>Ocorreu um erro.</span>";
+                        if ($u->conectarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == true) {
+                            session_start();
+                            $_SESSION["email"] = $u->getEmail();
+                            header("Location: acesso.php");               
+                        }
+
+                        else {
+                            echo "<span class='mensagemErro'>Usuário e/ou senha incorreto(s)</span>"; //redirecionando para outra página
+                        }
                     }
                 ?>
                 
-                <button type="submit" class="formBotao" name="cadastrar">Cadastrar</button>
+                <button type="submit" class="formBotao" name="conectar">Cadastrar</button>
 
                 <span>Esqueceu a senha? Clique aqui.</span>
                 <span>Nao tem cadastro? <a href="./cadastrar.php">Cadastre-se aqui.</a></span>

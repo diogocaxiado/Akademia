@@ -15,10 +15,9 @@
             $this->email = $_email;
             $this->dtNascimento = $_dtNascimento;
             $this->cidade = $_cidade;
-            $this->senha = $_senha;
+            $this->senha = md5($_senha);
         }
     
-
         public function getNome() {
             return $this->nome;
         }
@@ -79,7 +78,7 @@
         }
 
         public function listarUsuario() {
-            include('./db/conn.php');
+            include_once('./db/conn.php');
             $sql = "CALL psUsuario('')";
 
             $data = $conn->query($sql)->fetchAll();
@@ -87,9 +86,8 @@
             return $data;
         }
 
-        public function excluirUsuario($_id)
-        {
-            include("./db/conn.php");
+        public function excluirUsuario($_id) {
+            include_once("./db/conn.php");
             $sql = "CALL pdUsuario(:id)";
 
             $data = [
@@ -100,6 +98,22 @@
             $statement->execute($data);
 
             return true;
+        }
+
+        public function conectarUsuario($_email, $_senha) {
+            include_once("./db/conn.php");
+            $sql = "CALL psLoginUsuario('$_email', '$_senha')";
+            $statement = $conn->prepare($sql);
+
+            $statement->execute();
+
+            if ($user = $statement->fetch()) {
+                return true;
+            }
+
+            else {
+                return false;
+            }
         }
     }
 ?>

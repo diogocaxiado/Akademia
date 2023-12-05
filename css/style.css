@@ -272,3 +272,11 @@ body {
     color: #fa2424;
 }
 
+#botaoVoltar {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+}

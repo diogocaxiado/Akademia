@@ -69,3 +69,15 @@ CREATE PROCEDURE psLoginUsuario(
 BEGIN
 	SELECT * FROM usuario WHERE email = _email AND senha = _senha;
 END //
+
+DELIMITER //
+
+CREATE PROCEDURE psUsuario (
+  	IN _id		INT
+)
+
+BEGIN
+SELECT * FROM usuario
+WHERE idUsuario = _id;
+
+END //

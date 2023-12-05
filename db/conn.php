@@ -1,27 +1,27 @@
 <?php
-    // $dbHost     = "localhost";
-    // $dbUsername = "root";
-    // $dbPassword = "";
-    // $dbName     = "akademia";
+    $dbHost     = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbName     = "akademia";
 
-    define('HOST', 'localhost');
-    define('USER', 'root');
-    define('PASS', '');
-    define('DBNAME', 'akademia');
-    define('PORT', '3310');
+    $conn = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbPassword);
 
-    try{
-        $conn = new pdo('mysql:host=' . HOST . ';port=' . PORT . ';dbname=' . DBNAME, USER, PASS);
+    $link = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-    } catch(exception $err){
-        echo("<p>Erro ao conectar!" . $err->getCode() . "</p>");
+    if ($link->connect_error) {
+        die("Connection failed: " . $db->connect_error);
     }
 
-    // $conn = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbPassword);
+    // define('HOST', 'localhost');
+    // define('USER', 'root');
+    // define('PASS', '');
+    // define('DBNAME', 'akademia');
+    // define('PORT', '3306');
 
-    // $link = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+    // try{
+    //     $conn = new pdo('mysql:host=' . HOST . ';port=' . PORT . ';dbname=' . DBNAME, USER, PASS);
 
-    // if ($link->connect_error) {
-    //     die("Connection failed: " . $db->connect_error);
+    // } catch(exception $err){
+    //     echo("<p>Erro ao conectar!" . $err->getCode() . "</p>");
     // }
 ?>

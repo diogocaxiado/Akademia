@@ -79,7 +79,7 @@
 
         public function listarUsuario() {
             include_once('./db/conn.php');
-            $sql = "CALL psUsuario('')";
+            $sql = "CALL psListarUsuario    ('')";
 
             $data = $conn->query($sql)->fetchAll();
 
@@ -102,18 +102,58 @@
 
         public function conectarUsuario($_email, $_senha) {
             include_once("./db/conn.php");
-            $sql = "CALL psLoginUsuario('$_email', '$_senha')";
+            $senha = md5($_senha);
+            $sql = "CALL psLoginUsuario('$_email', '$senha')";
             $statement = $conn->prepare($sql);
-
+            
             $statement->execute();
-
+            
             if ($user = $statement->fetch()) {
                 return true;
             }
-
+            
             else {
                 return false;
             }
         }
+        
+        public function buscarUsuario($_id)
+        {
+            include("./db/conn.php");
+
+            $sql = "CALL psUsuario('$_id')";
+            $data = $conn->query($sql)->fetchAll();
+
+            foreach ($data as $item) {
+                $this->nome = $item["nome"];
+                $this->email = $item["email"];
+                $this->dtNascimento = $item["dtNascimento"];
+                $this->cidade = $item["cidade"];
+                $this->senha = $item["senha"];
+            }
+
+            return true;
+
+        }
+
+        public function atualizarUsuario($_id)
+        {
+            include("./db/conn.php");
+            $sql = "CALL puUsuario(:id, :nome, :email, :dtNascimento, :cidade, :senha)";
+
+            $data = [
+                'id' => $_id,
+                'nome' => $this->nome,
+                'email' => $this->email,
+                'dtNascimento' => $this->dtNascimento,
+                'cidade' => $this->cidade,
+                'senha' => $this->senha
+            ];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute($data);
+
+            return true;
+        }
     }
-?>
+?> 

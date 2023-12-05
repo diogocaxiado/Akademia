@@ -7,7 +7,7 @@
         <a href="#">Planos</a>
         <a href="#">Eventos</a>
         <a href="./areaRestrita.php">Área Restrita</a>
-        <a href="./cadastrar.php">Cadastre-se</a>
+        <a href="./cadastrarUsuario.php">Cadastre-se</a>
     </nav>
 
     <img id="logo" src="../assets/logo.png" alt="">

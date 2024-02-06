@@ -109,6 +109,7 @@
             $statement->execute();
             
             if ($user = $statement->fetch()) {
+                $this->nome=$user['nome'];
                 return true;
             }
             
@@ -133,7 +134,6 @@
             }
 
             return true;
-
         }
 
         public function atualizarUsuario($_id)

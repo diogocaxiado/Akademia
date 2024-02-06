@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: Inter;
-    background-color: #FAD824;
+    background-color: var(--primary);
 }
 
 .banner img {
@@ -30,13 +30,13 @@ body {
     font-family: Inter;
     font-size: 2.3rem;
   
-    color: #0A0A0A;
+    color: var(--text);
 }
 
 .saude p {
     font-size: 1.5rem;
     
-    color: #0A0A0A;
+    color: var(--text);
 }
 
 .modalidades {
@@ -45,7 +45,7 @@ body {
 
     width: 100%;
 
-    background-color: #262626;
+    background-color: var(--secondary);
 }
 
 .modalidades h2 {
@@ -74,7 +74,7 @@ body {
     width: 25rem;
 
     border-radius: 10px;
-    background-color: #FAD824;
+    background-color: var(--primary);
 }
 
 .card:hover {
@@ -94,7 +94,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     
-    color: #0A0A0A;
+    color: var(--text);
 }
 
 .button-modalidades {
@@ -115,22 +115,21 @@ body {
     border-radius: 10px;
     margin: 38px 0 28px;
 
-    background-color: #FAD824;
+    background-color: var(--primary);
 }
 
-.button-modalidades button:hover {
-    cursor: pointer;
-    
+.button-modalidades button:hover {    
     border: 1px solid #fafafa;
 }
 
 .formulario {
     display: flex;
-    height: calc(100vh - 12rem);
+    justify-content: space-around;
+    
+    width: 100%;
+    height: 100vh;
+    
     background-color: #262626;
-
-    justify-content: space-between;
-    padding: 0 4rem;
   
 }
 
@@ -155,11 +154,10 @@ body {
     gap: 14px;
 
     width: 34rem;
-    margin: 0 4rem;
-    padding: 1.4rem;
+    padding: 1rem;
 
     border-radius: 10px;
-    border: 1px solid #FAD824
+    border: 1px solid var(--primary);
 }
 
 #formCadastro label {
@@ -173,11 +171,11 @@ body {
 #formCadastro input {
     padding: 10px;
 
-    border: 1px solid #FAD824;
+    border: 1px solid var(--primary);
     border-radius: 5px;
 
     color: #FFF;
-    background-color: #262626;
+    background-color: var(--secondary);
 }
 
 #formCadastro input::placeholder {
@@ -198,7 +196,7 @@ body {
     padding: 1.4rem;
 
     border-radius: 10px;
-    border: 1px solid #FAD824
+    border: 1px solid var(--primary);
 }
 
 #formLogin label {
@@ -212,11 +210,11 @@ body {
 #formLogin input {
     padding: 10px;
 
-    border: 1px solid #FAD824;
+    border: 1px solid var(--primary);
     border-radius: 5px;
 
     color: #FFF;
-    background-color: #262626;
+    background-color: var(--secondary);
 }
 
 #formLogin input::placeholder {
@@ -250,21 +248,25 @@ body {
     font-weight: 700;
     
     color: #000;
-    background-color: #FAD824;
+    background-color: var(--primary);
 }
 
 .formBotao:hover {
     opacity: 0.8;
 }
 
-#imagemCadastro {
-    width: 100%;
+.imagemLateral {
+    width: 30%;
     height: 100%;
+
+    background-image: url("../assets/cadastroImagem.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mensagemSucesso {
     font-size: 1.2rem;
-    color: #FAD824;
+    color: var(--primary);
 }
 
 .mensagemErro {
@@ -275,8 +277,4 @@ body {
 #botaoVoltar {
     text-decoration: none;
     color: #000;
-}
-
-button {
-    cursor: pointer;
 }

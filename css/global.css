@@ -1,0 +1,10 @@
+:root {
+    --primary: #FAD824;
+    --secondary: #262626;
+
+    --text: #0A0A0A;
+}
+
+button {
+    cursor: pointer;
+}

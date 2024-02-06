@@ -10,5 +10,5 @@
         <a href="./cadastrarUsuario.php">Cadastre-se</a>
     </nav>
 
-    <img id="logo" src="../assets/logo.png" alt="">
+    <div id="logo"></div>
 </header>

@@ -47,3 +47,65 @@ footer strong {
     
     color: #0A0A0A;
 }
+
+.card {
+    display: flex;
+
+    width: 95%;
+    height: fit-content;
+    margin: 0 2rem;
+    border-radius: 5px;
+
+    background-color: var(--primary);
+}
+
+.card-interno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 30%;
+    padding: 2rem;
+}   
+
+.card-interno img {
+    width: 80%;
+}
+
+.card-interno span {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 29px;
+    font-weight: 700;
+
+    color: #0A0A0A;
+}
+
+.card-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 8rem;
+}
+
+.card-texto p {
+    width: 100%;
+    margin-right: 2rem;
+
+    font-size: 1.5rem;
+    line-height: 29.05px;
+    font-weight: 400;
+
+    color: #000;
+}
+
+.componentesCard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}

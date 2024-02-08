@@ -3,7 +3,7 @@
 <header>
     <nav>
         <a href="./index.php">Início</a>
-        <a href="#servicos">Serviços</a>
+        <a href="./modalidades.php">Modalidades</a>
         <a href="#">Planos</a>
         <a href="#">Eventos</a>
         <a href="./areaRestrita.php">Área Restrita</a>

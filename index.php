@@ -17,9 +17,7 @@
         include_once('./components/header.php');
     ?>
 
-    <section class="banner">
-        <img src="./assets/banner.png" alt="banner da página">
-    </section>
+    <section class="banner"></section>
     
     <main>
         <section class="saude">
@@ -34,22 +32,22 @@
             <h2>Nossas modalidades</h2>
 
             <article class="area-card">
-                <div class="card">
+                <div>
                     <img src="./assets/musculacao.png" alt="">
                     <span>Musculação</span>
                 </div>
-                <div class="card">
+                <div>
                     <img src="./assets/ginastica.png" alt="">
                     <span>Ginástica</span>
                 </div>
-                <div class="card">
+                <div>
                     <img src="./assets/yoga.png" alt="">
                     <span>Yoga</span>
                 </div>
             </article>
 
             <div class="button-modalidades">
-                <button>Confira todas as opções</button>
+                <a href="./modalidades.php">Confira todas as opções</a>
             </div>
         </section>
     </main>

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
 
-    <title>Akademia</title>
+    <title>Akademia - Cadastro</title>
 </head>
 <body>
     <?php
@@ -39,7 +39,7 @@
                     
                     <label for="cidade">Cidade:</label>
                     <input type="text" placeholder="Informe sua cidade" name="cidade" required>
-                    
+
                     <label for="senha">Senha:</label>
                     <input type="password" placeholder="Informe uma senha com 8 caracteres ou mais" name="senha" required>
                     
@@ -62,7 +62,7 @@
                 </form>
             </div>
 
-            <div class="imagemLateral"></div>
+            <div class="imagemCadastro"></div>
         </section>
     </main>
 

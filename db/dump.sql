@@ -81,3 +81,11 @@ SELECT * FROM usuario
 WHERE idUsuario = _id;
 
 END //
+
+DELIMITER //
+
+CREATE PROCEDURE psModalidade()
+BEGIN
+SELECT * FROM modalidade;
+
+END //

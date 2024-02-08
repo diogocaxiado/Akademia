@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
 
-    <title>Akademia</title>
+    <title>Akademia - Acessar</title>
 </head>
 <body>
     <?php
@@ -58,9 +58,7 @@
             </form>
         </div>
 
-            <section class="imagemLateral">
-                <img src="./assets/loginImagem.jpg" id="imagemCadastro" alt="">
-            </section>
+            <div class="imagemLogin"></div>
         </section>
     </main>
 

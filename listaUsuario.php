@@ -50,6 +50,8 @@
 
             echo "</table>"
         ?>
+
+        <a href="./acesso.php" class="botaoPrimario">Voltar</a>
     </div>
     
     <?php

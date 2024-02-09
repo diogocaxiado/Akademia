@@ -89,3 +89,15 @@ BEGIN
 SELECT * FROM modalidade;
 
 END //
+
+DELIMITER //
+
+CREATE PROCEDURE piModalidade (
+	IN _nome			VARCHAR(100),
+    IN _descricao		VARCHAR(2000),
+    IN _imagem			VARCHAR(2000)
+)
+BEGIN
+	INSERT INTO modalidade (nome, descricao, imagem) 
+    VALUES (_nome, _descricao, _imagem);
+END //

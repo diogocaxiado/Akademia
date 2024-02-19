@@ -54,7 +54,7 @@
                 <button type="submit" class="formBotao" name="conectar">Cadastrar</button>
 
                 <span>Esqueceu a senha? Clique aqui.</span>
-                <span>Nao tem cadastro? <a href="./cadastrar.php">Cadastre-se aqui.</a></span>
+                <span>Nao tem cadastro? <a href="./cadastrarUsuario.php">Cadastre-se aqui.</a></span>
             </form>
         </div>
 

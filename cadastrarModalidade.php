@@ -26,13 +26,13 @@
         <form method="post" id="formModalidade">
         
             <label for="nome">Nome:</label>
-            <input type="text" placeholder="Informe seu nome completo" name="nome" required>
+            <input type="text" placeholder="Informe o nome da modalidade" name="nome" required>
             
             <label for="descricao">Descrição:</label>
             <textarea rows="5" cols="50" id="descricao" placeholder="Informe a descrição da modalidade" name="descricao" required></textarea>
             
             <label for="imagem">Imagem:</label>
-            <input type="file" name="imagemUp" required>
+            <input type="file" name="imagem" required>
             
             <div class="botoesModalidade">
                 <button type="submit" name="submit">Cadastrar</button>
@@ -40,16 +40,16 @@
             </div>
             
             <?php
-                if (isset($_REQUEST["submit"])) {
+                if (isset($_REQUEST["imagem"])) {
 
                     $target_dir = "assets/upload/";
-                    $target_file = $target_dir . basename($_FILES["imagemUp"]["name"]);
+                    $target_file = $target_dir . basename($_FILES["imagem"]["name"]);
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
+            
                     // Check if image file is a actual image or fake image
                     if(isset($_POST["submit"])) {
-                    $check = getimagesize($_FILES["imagemUp"]["tmp_name"]);
+                    $check = getimagesize($_FILES["imagem"]["tmp_name"]);
                     if($check !== false) {
                         echo "File is an image - " . $check["mime"] . ".";
                         $uploadOk = 1;
@@ -58,16 +58,16 @@
                         $uploadOk = 0;
                     }
                     }
-
+            
                     //
-
+            
                     // Check if $uploadOk is set to 0 by an error
                     if ($uploadOk == 0) {
                     echo "Sorry, your file was not uploaded.";
                     // if everything is ok, try to upload file
                     } else {
-                    if (move_uploaded_file($_FILES["imagemUp"]["tmp_name"], $target_file)) {
-                        echo "The file ". htmlspecialchars( basename( $_FILES["imagemUp"]["name"])). " has been uploaded.";
+                    if (move_uploaded_file($_FILES["imagem"]["tmp_name"], $target_file)) {
+                        echo "The file ". htmlspecialchars( basename( $_FILES["imagem"]["name"])). " has been uploaded.";
                     } else {
                         echo "Sorry, there was an error uploading your file.";
                     }
